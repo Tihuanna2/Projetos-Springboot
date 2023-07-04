@@ -3,9 +3,9 @@ package com.tihuanna.blogpessoal.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.tihuanna.blogpessoal.model.Tema;
+import com.tihuanna.blogpessoal.model.Usuario;
 
 @Repository
-public interface temaRepository extends JpaRepository<Tema, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
 }
