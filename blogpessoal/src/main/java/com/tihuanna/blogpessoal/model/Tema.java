@@ -11,12 +11,16 @@ import jakarta.validation.constraints.Size;
 @Table (name = "tb_temas")
 public class Tema {
 
-	public Long getId() {
-		return id;
+	@Id
+	@GeneratedValue
+	private Long temaId;
+	
+	public Long getTemaId() {
+		return temaId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setTemaId(Long temaId) {
+		this.temaId = temaId;
 	}
 
 	public String getDescricao() {
@@ -27,10 +31,6 @@ public class Tema {
 		this.descricao = descricao;
 	}
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	
 	@NotBlank
 	@Size (min = 5, max = 100, message = "O atributo descricao deve conter entre 5 a 100 caracteres")
 	private String descricao;

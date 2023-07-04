@@ -1,6 +1,5 @@
 package com.tihuanna.blogpessoal.model;
 
-
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.UpdateTimestamp;
@@ -13,30 +12,20 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-
 @Entity
-@Table (name = "tb_postagens")
+@Table(name = "tb_postagens")
 public class Postagem {
-	
+
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	
-	@NotBlank
-	@Size (min = 5, max = 100, message = "O atributo titulo deve conter entre 5 a 25 caracteres!!")
-	private String titulo;
-	
-	@NotBlank
-	@Size (min = 5, max = 1000, message = "O atributo texto deve conter entre 5 a 1000 caracteres!!")
-	private String texto;
-	
-	public Long getId() {
-		return id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long postagemId;
+
+	public Long getPostagemId() {
+		return postagemId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setPostagemId(Long postagemId) {
+		this.postagemId = postagemId;
 	}
 
 	public String getTitulo() {
@@ -63,8 +52,17 @@ public class Postagem {
 		this.data = data;
 	}
 
+	@NotBlank
+	@Size(min = 5, max = 100, message = "O atributo titulo deve conter entre 5 a 25 caracteres!!")
+	private String titulo;
+
+	@NotBlank
+	@Size(min = 5, max = 1000, message = "O atributo texto deve conter entre 5 a 1000 caracteres!!")
+	private String texto;
+	
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
-	
 }
+
+	

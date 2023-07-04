@@ -13,7 +13,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long userId;
 	
 	@NotBlank
 	@Size (min = 5, max = 25, message = "O atributo nome deve conter entre 5 a 25 caracteres!!")
@@ -23,16 +23,12 @@ public class Usuario {
 	@Size (min = 5, max = 25, message = "O atributo usuario deve conter entre 5 a 25 caracteres!!")
 	private String usuario;
 	
-	@NotBlank
-	@Size (min = 7, max = 25, message = "O atributo senha deve conter entre 5 a 25 caracteres!!")
-	private String senha;
-
-	public Long getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	public String getNome() {
@@ -58,7 +54,9 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
+
+	@NotBlank
+	@Size (min = 7, max = 25, message = "O atributo senha deve conter entre 5 a 25 caracteres!!")
+	private String senha;
 
 }
