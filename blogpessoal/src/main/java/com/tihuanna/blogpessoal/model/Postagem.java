@@ -24,7 +24,7 @@ public class Postagem {
 	
 	
 	@NotBlank
-	@Size (min = 5, max = 25, message = "O atributo titulo deve conter entre 5 a 25 caracteres!!")
+	@Size (min = 5, max = 100, message = "O atributo titulo deve conter entre 5 a 25 caracteres!!")
 	private String titulo;
 	
 	@NotBlank
