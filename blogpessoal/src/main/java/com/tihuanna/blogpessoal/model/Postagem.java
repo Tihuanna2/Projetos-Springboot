@@ -21,14 +21,15 @@ public class Postagem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long postagemId;
+	private Long id;
 
-	public Long getPostagemId() {
-		return postagemId;
+
+	public Long getId() {
+		return id;
 	}
 
-	public void setPostagemId(Long postagemId) {
-		this.postagemId = postagemId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getTitulo() {

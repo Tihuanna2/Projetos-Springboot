@@ -19,14 +19,15 @@ public class Tema {
 
 	@Id
 	@GeneratedValue
-	private Long temaId;
+	private Long id;
 	
-	public Long getTemaId() {
-		return temaId;
+
+	public Long getId() {
+		return id;
 	}
 
-	public void setTemaId(Long temaId) {
-		this.temaId = temaId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getDescricao() {
@@ -41,6 +42,7 @@ public class Tema {
 	@Size (min = 5, max = 100, message = "O atributo descricao deve conter entre 5 a 100 caracteres")
 	private String descricao;
 	
+
 	@OneToMany (mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties ("tema")
 	private List <Postagem> postagem;
